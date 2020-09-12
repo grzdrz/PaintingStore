@@ -1,18 +1,33 @@
 import '../base/base';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TestComponent from '../../components/test-component/test-component';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+
+import ReducerManager from '../../storage/ReducerManager';
+
 import './prod-pages.scss';
 
 class App extends React.Component {
   render() {
     return (
-      <div className='prod-pages__test-component'>
-        <TestComponent />
+      <div className='prod-pages__products-list'>
+        sgsgsdgds
       </div>
     );
   }
 }
 
+const reducerManager = new ReducerManager();
+const store = createStore(reducerManager.reducer);
+store.dispatch({
+  type: 'default',
+});
+
 const appContainer = document.querySelector('.prod-pages');
-ReactDOM.render(<App />, appContainer);
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  appContainer
+);

@@ -1,0 +1,3 @@
+interface ISearchBarState {
+  text: string,
+}

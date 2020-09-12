@@ -46,6 +46,8 @@ module.exports = {
     historyApiFallback: true,
   },
 
+  devtool: "source-map",
+
   module: {
     rules: [
       /* {

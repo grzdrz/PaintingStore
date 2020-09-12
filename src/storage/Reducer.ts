@@ -1,0 +1,17 @@
+import IAction from "./IAction";
+import ReducerManager from "./ReducerManager";
+import IProductsState from "./Products/IProductsState";
+
+abstract class Reducer<TState> {
+  public reducerManager: ReducerManager;
+  public state: TState;
+
+  constructor(reducerManager: ReducerManager, state: TState) {
+    this.reducerManager = reducerManager;
+    this.state = state;
+  }
+
+  abstract reduce(state: TState, action: IAction): TState;
+}
+
+export default Reducer;
