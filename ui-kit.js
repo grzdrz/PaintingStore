@@ -28966,7 +28966,11 @@ var map = {
 	"./assets/fonts/Merriweather/merriweather-regular.woff2": "./src/assets/fonts/Merriweather/merriweather-regular.woff2",
 	"./components/logo/images/logo.svg": "./src/components/logo/images/logo.svg",
 	"./components/test-component/images/абрикос-1.jpg": "./src/components/test-component/images/абрикос-1.jpg",
-	"./components/test-component/images/ананас-2.jpg": "./src/components/test-component/images/ананас-2.jpg"
+	"./components/test-component/images/ананас-2.jpg": "./src/components/test-component/images/ананас-2.jpg",
+	"./data/images/painting-0.jpg": "./src/data/images/painting-0.jpg",
+	"./data/images/painting-1.jpg": "./src/data/images/painting-1.jpg",
+	"./data/images/painting-2.jpg": "./src/data/images/painting-2.jpg",
+	"./data/images/painting-3.jpg": "./src/data/images/painting-3.jpg"
 };
 
 
@@ -29454,6 +29458,58 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/data/images/painting-0.jpg":
+/*!****************************************!*\
+  !*** ./src/data/images/painting-0.jpg ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/data/images/painting-0.jpg");
+
+/***/ }),
+
+/***/ "./src/data/images/painting-1.jpg":
+/*!****************************************!*\
+  !*** ./src/data/images/painting-1.jpg ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/data/images/painting-1.jpg");
+
+/***/ }),
+
+/***/ "./src/data/images/painting-2.jpg":
+/*!****************************************!*\
+  !*** ./src/data/images/painting-2.jpg ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/data/images/painting-2.jpg");
+
+/***/ }),
+
+/***/ "./src/data/images/painting-3.jpg":
+/*!****************************************!*\
+  !*** ./src/data/images/painting-3.jpg ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/data/images/painting-3.jpg");
+
+/***/ }),
+
 /***/ "./src/pages/base/base.scss":
 /*!**********************************!*\
   !*** ./src/pages/base/base.scss ***!
@@ -29591,4 +29647,4 @@ react_dom__WEBPACK_IMPORTED_MODULE_2___default.a.render(react__WEBPACK_IMPORTED_
 /***/ })
 
 /******/ });
-//# sourceMappingURL=ui-kit.js.map?v=b5898e140a2ac85486cb
+//# sourceMappingURL=ui-kit.js.map?v=33e733fbc6c1b980061a

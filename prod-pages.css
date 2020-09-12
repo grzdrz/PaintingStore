@@ -248,13 +248,89 @@ $gradient-gray-to-blue: linear-gradient(180deg, rgb(145, 145, 145) 0%, rgb(61, 7
     padding-top: 0.1rem; }
   .footer__navigation-bar {
     margin-left: 3rem; }
+  .footer__phone {
+    display: flex;
+    align-items: center;
+    margin-right: 3.2rem;
+    font-size: 0.875rem;
+    color: #555555; }
+    .footer__phone-symbol {
+      margin-right: 0.6rem; }
+  .footer__address {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #555555; }
+    .footer__address-symbol {
+      margin-right: 0.65rem; }
 
 .prod-pages {
   display: flex;
   flex-direction: column; }
-  .prod-pages__products-list {
-    padding: 1rem 1rem; }
 
+.product-block {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e1e1e1; }
+  .product-block_is-sold {
+    opacity: 0.5; }
+  .product-block__image-container {
+    width: 17.5rem;
+    height: 9.8rem; }
+  .product-block__image {
+    width: 100%;
+    height: 100%; }
+  .product-block__description {
+    display: flex;
+    flex-direction: column;
+    padding: 1.35rem 1.5rem 1.4rem; }
+  .product-block__name-and-author {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.35rem;
+    font-size: 1.125rem; }
+  .product-block__prices-and-buying-button {
+    display: flex;
+    justify-content: space-between; }
+  .product-block__prices {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .product-block__old-price {
+    font-size: 0.875rem;
+    -webkit-text-decoration-line: line-through;
+            text-decoration-line: line-through;
+    color: #a0a0a0; }
+  .product-block__price {
+    font-weight: bold; }
+  .product-block__buying-button {
+    min-width: 7.375rem; }
+  .product-block__sold-text {
+    margin: 0.7rem 0rem;
+    font-weight: bold; }
+
+.products-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.7rem 0rem 20rem; }
+  .products-list__container {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */ }
+  .products-list__title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem; }
+  .products-list__list {
+    list-style: none;
+    display: flex; }
+  .products-list__item {
+    margin: 0rem 0.95rem; }
+    .products-list__item:first-of-type {
+      margin-left: 0rem; }
+    .products-list__item:last-of-type {
+      margin-right: 0rem; }
 
 
 /*# sourceMappingURL=prod-pages.css.map*/
