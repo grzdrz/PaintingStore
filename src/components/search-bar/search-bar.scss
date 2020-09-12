@@ -1,0 +1,52 @@
+@import '../../assets/constants.scss';
+
+.search-bar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    max-width: 26rem;
+    margin-bottom: 0.7rem;
+    font-weight: bold;
+  }
+
+  &__container {
+    max-width: 26rem;
+    display: flex;
+  }
+
+  &__input {
+    caret-color: $color-dark-brown;
+    width: -webkit-fill-available;
+    padding-left: 1rem;
+    border: 1px solid rgb(225, 225, 225);
+    background: transparent;
+    outline: none;
+
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    color: $color-black-brown;
+
+    &::-webkit-input-placeholder {
+      background: $color-gray;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      border: 0rem solid transparent;
+    }
+
+    &:focus,
+    &:hover {
+      border: 1px solid rgb(181, 181, 181);
+    }
+  }
+
+  &__button {
+    min-width: 7.625rem;
+  }
+}

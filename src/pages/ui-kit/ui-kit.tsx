@@ -2,6 +2,7 @@ import '../base/base';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Button from '../../components/button/button';
+import SearchBar from '../../components/search-bar/search-bar';
 import './ui-kit.scss';
 
 function App() {
@@ -41,6 +42,22 @@ function App() {
               withCheckMark
             />
           </div>
+        </div>
+      </div>
+      <div className='ui-kit__search-bars'>
+        <p className='ui-kit__search-bars-title'>Поиск</p>
+        <div className='ui-kit__search-bar'>
+          <SearchBar
+            title='Нормал'
+            placeholder='Поиск по названию картины'
+          />
+        </div>
+        <div className='ui-kit__search-bar'>
+          <SearchBar
+            title='Актив'
+            placeholder='Поиск по названию картины'
+            value='М'
+          />
         </div>
       </div>
     </>

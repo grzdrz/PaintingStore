@@ -43,6 +43,7 @@
   }
 
   &__buttons-demo {
+    margin-bottom: 3.7rem;
   }
 
   &__buttons-title {
@@ -62,6 +63,20 @@
 
     &:last-of-type {
       margin-right: 0rem;
+    }
+  }
+
+  &__search-bars-title {
+    margin-bottom: 1.3rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  &__search-bar {
+    margin-bottom: 2.1rem;
+
+    &:last-of-type {
+      margin-bottom: 0rem;
     }
   }
 }
