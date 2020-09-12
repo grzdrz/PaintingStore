@@ -14,7 +14,7 @@ function Footer() {
       <div className='footer__navigation-bar'>
         <NavigationBar />
       </div>
-      <p className='footer__phone-number'><PhoneSymbol />+7 (495) 555-55-55</p>
+      <p className='footer__phone'><PhoneSymbol />+7 (495) 555-55-55</p>
       <p className='footer__address'><AddressSymbol />г. Москва, ул. Расплетина, 24</p>
     </footer>
   );

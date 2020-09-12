@@ -13,4 +13,27 @@
   &__navigation-bar {
     margin-left: 3rem;
   }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    margin-right: 3.2rem;
+    font-size: 0.875rem;
+    color: rgb(85, 85, 85);
+
+    &-symbol {
+      margin-right: 0.6rem;
+    }
+  }
+
+  &__address {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    color: rgb(85, 85, 85);
+
+    &-symbol {
+      margin-right: 0.65rem;
+    }
+  }
 }
