@@ -1,0 +1,31 @@
+@import '../../assets/constants.scss';
+
+.navigation-bar {
+  display: flex;
+
+  &__list {
+    list-style: none;
+    display: flex;
+  }
+
+  &__item {
+    margin: 0rem 1.52rem;
+
+    &:first-of-type {
+      margin-left: 0rem;
+    }
+
+    &:last-of-type {
+      margin-right: 0rem;
+    }
+  }
+
+  &__item-ref {
+    text-decoration: none;
+    color: $color-black-brown;
+  }
+
+  &__item-ref-text {
+    font-size: 0.875rem;
+  }
+}

@@ -6,13 +6,25 @@ import { Provider } from 'react-redux';
 
 import ReducerManager from '../../storage/ReducerManager';
 
+import Header from '../../components/header/header';
+import Footer from '../../components/footer/footer';
+
 import './prod-pages.scss';
+import ProductsList from './products-list/products-list';
 
 class App extends React.Component {
   render() {
     return (
-      <div className='prod-pages__products-list'>
-        sgsgsdgds
+      <div className='prod-pages'>
+        <div className='prod-pages__header'>
+          <Header />
+        </div>
+        <div className='prod-pages__products-list'>
+          <ProductsList />
+        </div>
+        <div className='prod-pages__footer'>
+          <Footer />
+        </div>
       </div>
     );
   }
