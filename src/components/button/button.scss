@@ -1,0 +1,46 @@
+@import '../../assets/constants.scss';
+
+.button {
+  cursor: pointer;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0rem 0.3125rem;
+  background: $color-dark-brown;
+  outline: none;
+
+  &_with-check-mark {
+    background: $color-red-brown;
+
+    .button__text {
+      margin-left: 0.1875rem;
+    }
+  }
+
+  &:hover {
+    background: $color-brown;
+  }
+
+  &:disabled {
+    background: $color-light-brown;
+  }
+
+  &__check-mark {
+    margin-bottom: 0.25rem;
+    font-size: 1.25rem;
+    font-family: 'Material Icons';
+    color: $color-dark-white;
+  }
+
+  &__text {
+    max-width: -webkit-fill-available;
+    font-family: Merriweather, Georgia, serif;
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: $color-dark-white;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}

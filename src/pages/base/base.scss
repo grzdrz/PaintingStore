@@ -22,3 +22,8 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+p,
+span {
+  line-height: 150%;
+}
