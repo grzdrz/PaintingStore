@@ -3,6 +3,7 @@ import IProductsState from "../Products/IProductsState";
 import Reducer from "../Reducer";
 import ReducerManager from "../ReducerManager";
 import ISearchBarAction from "./actions/ISearchBarAction";
+import ISearchBarState from "./ISearchBarState";
 
 const initialState: ISearchBarState = {
   text: '',

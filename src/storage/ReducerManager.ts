@@ -1,16 +1,13 @@
 import { Reducer } from 'react';
 import { AnyAction, CombinedState, combineReducers } from 'redux';
-import IProductsState from './Products/IProductsState';
+import IReducedState from './IReducedState';
 import ProductsReducer from './Products/ProductsReducer';
 import SearchBarReducer from './SearchBar/SearchBarReducer';
 
 class ReducerManager {
   public productsReducer: ProductsReducer;
   public searchBarReducer: SearchBarReducer;
-  public reducer: Reducer<CombinedState<{
-    products: IProductsState;
-    searchBar: ISearchBarState;
-  }>, AnyAction>;
+  public reducer: Reducer<CombinedState<IReducedState>, AnyAction>;
 
   constructor() {
     this.productsReducer = new ProductsReducer(this);
