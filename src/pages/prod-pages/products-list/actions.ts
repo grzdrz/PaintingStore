@@ -1,9 +1,11 @@
-import CreateItemAction from '../../../storage/Products/actions/CreateItemAction';
-import UpdateItemAction from '../../../storage/Products/actions/UpdateItemAction';
+import createItemAction from '../../../storage/Products/actions/CreateItemAction';
+import updateItemAction from '../../../storage/Products/actions/UpdateItemAction';
+import searchBarAction from '../../../storage/SearchBar/actions/SearchBarAction';
 
 const actions = {
-  CreateItemAction,
-  UpdateItemAction,
+  createItemAction,
+  updateItemAction,
+  searchBarAction,
 };
 
 export default actions;

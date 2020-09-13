@@ -1,10 +1,18 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import IReducedState from '../../storage/IReducedState';
+import ISearchBarAction from '../../storage/SearchBar/actions/ISearchBarAction';
 import Logo from '../logo/logo';
 import NavigationBar from '../navigation-bar/navigation-bar';
 import SearchBar from '../search-bar/search-bar';
+import actions from './actions';
 import './header.scss';
 
-function Header() {
+interface IProps {
+  searchBarAction: (text: string) => ISearchBarAction,
+}
+
+function Header(props: IProps) {
   return (
     <header className='header'>
       <div className='header__logo'>
@@ -14,10 +22,14 @@ function Header() {
         <NavigationBar />
       </div>
       <div className='header__search-bar'>
-        <SearchBar />
+        <SearchBar
+          searchBarAction={props.searchBarAction}
+        />
       </div>
     </header>
   );
 }
-
-export default Header;
+const mapStateToProps = function (state: IReducedState) {
+  return state;
+};
+export default connect(mapStateToProps, actions)(Header);

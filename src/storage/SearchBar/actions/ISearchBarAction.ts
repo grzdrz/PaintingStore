@@ -2,7 +2,7 @@ import IAction from "../../IAction";
 
 interface ISearchBarAction extends IAction {
   type: string;
-  text: string;
+  textPattern: string;
 }
 
 export default ISearchBarAction;

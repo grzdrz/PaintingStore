@@ -1,4 +1,5 @@
 import IAction from "../IAction";
+import IProduct from "../Products/IProduct";
 import IProductsState from "../Products/IProductsState";
 import Reducer from "../Reducer";
 import ReducerManager from "../ReducerManager";
@@ -6,7 +7,8 @@ import ISearchBarAction from "./actions/ISearchBarAction";
 import ISearchBarState from "./ISearchBarState";
 
 const initialState: ISearchBarState = {
-  text: '',
+  textPattern: '',
+  matchedProducts: [],
 };
 
 class SearchBarReducer extends Reducer<ISearchBarState> {
@@ -19,8 +21,12 @@ class SearchBarReducer extends Reducer<ISearchBarState> {
 
     switch (action.type) {
       case 'FIND_ITEMS': {
-
-
+        this.state.textPattern = action.textPattern;
+        if (action.textPattern)
+          this.state.matchedProducts = this.selectProductsByPattern(this.state.textPattern);
+        /* else {
+          this.state.products = [];
+        } */
         break;
       }
       default: {
@@ -29,6 +35,16 @@ class SearchBarReducer extends Reducer<ISearchBarState> {
     }
 
     return this.state;
+  }
+
+  private selectProductsByPattern(text: string) {
+    const { allProducts } = this.reducerManager.productsReducer.state;
+    const pattern = new RegExp(`${text}`, 'gi');
+    const products = allProducts.filter((product) => {
+      const match = product.name.match(pattern);
+      return match;
+    });
+    return products;
   }
 }
 

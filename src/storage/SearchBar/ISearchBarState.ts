@@ -1,5 +1,8 @@
+import IProduct from "../Products/IProduct";
+
 interface ISearchBarState {
-  text: string,
+  textPattern: string,
+  matchedProducts: Array<IProduct>,
 }
 
 export default ISearchBarState;
