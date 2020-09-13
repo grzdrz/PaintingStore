@@ -32976,16 +32976,17 @@ __webpack_require__.r(__webpack_exports__);
 
 function Footer() {
     return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", { className: 'footer' },
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'footer__logo' },
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_logo_logo__WEBPACK_IMPORTED_MODULE_1__["default"], null)),
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'footer__navigation-bar' },
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_navigation_bar_navigation_bar__WEBPACK_IMPORTED_MODULE_2__["default"], null)),
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", { className: 'footer__phone' },
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_images_phone_symbol__WEBPACK_IMPORTED_MODULE_3__["default"], null),
-            "+7 (495) 555-55-55"),
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", { className: 'footer__address' },
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_images_address_symbol__WEBPACK_IMPORTED_MODULE_4__["default"], null),
-            "\u0433. \u041C\u043E\u0441\u043A\u0432\u0430, \u0443\u043B. \u0420\u0430\u0441\u043F\u043B\u0435\u0442\u0438\u043D\u0430, 24")));
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'footer__container' },
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'footer__logo' },
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_logo_logo__WEBPACK_IMPORTED_MODULE_1__["default"], null)),
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'footer__navigation-bar' },
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_navigation_bar_navigation_bar__WEBPACK_IMPORTED_MODULE_2__["default"], null)),
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", { className: 'footer__phone' },
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_images_phone_symbol__WEBPACK_IMPORTED_MODULE_3__["default"], null),
+                "+7 (495) 555-55-55"),
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", { className: 'footer__address' },
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_images_address_symbol__WEBPACK_IMPORTED_MODULE_4__["default"], null),
+                "\u0433. \u041C\u043E\u0441\u043A\u0432\u0430, \u0443\u043B. \u0420\u0430\u0441\u043F\u043B\u0435\u0442\u0438\u043D\u0430, 24"))));
 }
 /* harmony default export */ __webpack_exports__["default"] = (Footer);
 
@@ -33100,6 +33101,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./actions */ "./src/components/header/actions.ts");
 /* harmony import */ var _header_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./header.scss */ "./src/components/header/header.scss");
 /* harmony import */ var _header_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_header_scss__WEBPACK_IMPORTED_MODULE_6__);
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 
 
 
@@ -33107,15 +33121,44 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function Header(props) {
-    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", { className: 'header' },
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'header__logo' },
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_logo_logo__WEBPACK_IMPORTED_MODULE_2__["default"], null)),
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'header__navigation-bar' },
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_navigation_bar_navigation_bar__WEBPACK_IMPORTED_MODULE_3__["default"], null)),
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'header__search-bar' },
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_search_bar_search_bar__WEBPACK_IMPORTED_MODULE_4__["default"], { searchBarAction: props.searchBarAction }))));
-}
+var Header = /** @class */ (function (_super) {
+    __extends(Header, _super);
+    /* public logoRef = React.createRef<>(); */
+    function Header(props) {
+        var _this = _super.call(this, props) || this;
+        _this.handleBurgerClick = function () {
+            _this.setState({
+                isClosed: !_this.state.isClosed,
+            });
+            /* this.logoContainer.classList.toggle('header__colored-logo_closed');
+            this.burger.classList.toggle('header__burger_closed');
+            this.burgerElements.forEach((element) => element.classList.toggle('header__burger-element_opened'));
+            this.navigationMenu.classList.toggle('header__navigation-menu_closed');
+            if (this.buttons) this.buttons.classList.toggle('header__buttons_closed');
+            if (this.userFullName) this.userFullName.classList.toggle('header__user-full-name_closed'); */
+        };
+        _this.state = {
+            isClosed: false,
+        };
+        return _this;
+    }
+    Header.prototype.render = function () {
+        var isClosed = this.state.isClosed;
+        return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", { className: 'header' },
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'header__container' },
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: "header__logo " + (isClosed ? 'header__colored-logo_closed' : '') },
+                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_logo_logo__WEBPACK_IMPORTED_MODULE_2__["default"], null),
+                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: "header__burger " + (isClosed ? 'header__burger_closed' : ''), onClick: this.handleBurgerClick },
+                        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: "header__burger-element " + (isClosed ? '' : 'header__burger-element_opened') }),
+                        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: "header__burger-element " + (isClosed ? '' : 'header__burger-element_opened') }),
+                        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: "header__burger-element " + (isClosed ? '' : 'header__burger-element_opened') }))),
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: "header__navigation-bar " + (isClosed ? 'header__navigation-bar_closed' : '') },
+                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_navigation_bar_navigation_bar__WEBPACK_IMPORTED_MODULE_3__["default"], null)),
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: "header__search-bar " + (isClosed ? 'header__search-bar_closed' : '') },
+                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_search_bar_search_bar__WEBPACK_IMPORTED_MODULE_4__["default"], { searchBarAction: this.props.searchBarAction })))));
+    };
+    return Header;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component));
 var mapStateToProps = function (state) {
     return state;
 };
@@ -34129,4 +34172,4 @@ function searchBarAction(textPattern) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=prod-pages.js.map?v=dae96a752ca0094a0140
+//# sourceMappingURL=prod-pages.js.map?v=a4b5801541f142cb7f8b

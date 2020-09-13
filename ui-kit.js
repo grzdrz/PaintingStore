@@ -29660,4 +29660,4 @@ react_dom__WEBPACK_IMPORTED_MODULE_2___default.a.render(react__WEBPACK_IMPORTED_
 /***/ })
 
 /******/ });
-//# sourceMappingURL=ui-kit.js.map?v=dae96a752ca0094a0140
+//# sourceMappingURL=ui-kit.js.map?v=a4b5801541f142cb7f8b

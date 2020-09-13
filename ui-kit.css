@@ -160,8 +160,8 @@ $gradient-gray-to-blue: linear-gradient(180deg, rgb(145, 145, 145) 0%, rgb(61, 7
     display: flex; }
   .search-bar__input {
     caret-color: #403432;
-    width: -webkit-fill-available;
-    padding-left: 1rem;
+    width: 100%;
+    padding: 0rem 1rem;
     border: 1px solid #e1e1e1;
     background: transparent;
     outline: none;
