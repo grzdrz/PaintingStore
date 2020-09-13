@@ -32910,7 +32910,10 @@ __webpack_require__.r(__webpack_exports__);
 
 function Button(props) {
     var text = props.text, withCheckMark = props.withCheckMark, disabled = props.disabled;
-    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", { className: "button " + (props.withCheckMark ? 'button_with-check-mark' : ''), disabled: disabled },
+    var handleButtonClick = function (event) {
+        props.handleClick(event);
+    };
+    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", { className: "button " + (props.withCheckMark ? 'button_with-check-mark' : ''), disabled: disabled, onClick: handleButtonClick },
         props.withCheckMark ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'button__check-mark' }, "check") : null,
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'button__text' }, props.text)));
 }
@@ -33031,6 +33034,25 @@ function PhoneSymbol() {
 
 /***/ }),
 
+/***/ "./src/components/header/actions.ts":
+/*!******************************************!*\
+  !*** ./src/components/header/actions.ts ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _storage_SearchBar_actions_SearchBarAction__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../storage/SearchBar/actions/SearchBarAction */ "./src/storage/SearchBar/actions/SearchBarAction.ts");
+
+var actions = {
+    searchBarAction: _storage_SearchBar_actions_SearchBarAction__WEBPACK_IMPORTED_MODULE_0__["default"],
+};
+/* harmony default export */ __webpack_exports__["default"] = (actions);
+
+
+/***/ }),
+
 /***/ "./src/components/header/header.scss":
 /*!*******************************************!*\
   !*** ./src/components/header/header.scss ***!
@@ -33071,26 +33093,33 @@ module.exports = content.locals || {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _logo_logo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../logo/logo */ "./src/components/logo/logo.tsx");
-/* harmony import */ var _navigation_bar_navigation_bar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../navigation-bar/navigation-bar */ "./src/components/navigation-bar/navigation-bar.tsx");
-/* harmony import */ var _search_bar_search_bar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../search-bar/search-bar */ "./src/components/search-bar/search-bar.tsx");
-/* harmony import */ var _header_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./header.scss */ "./src/components/header/header.scss");
-/* harmony import */ var _header_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_header_scss__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _logo_logo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../logo/logo */ "./src/components/logo/logo.tsx");
+/* harmony import */ var _navigation_bar_navigation_bar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../navigation-bar/navigation-bar */ "./src/components/navigation-bar/navigation-bar.tsx");
+/* harmony import */ var _search_bar_search_bar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../search-bar/search-bar */ "./src/components/search-bar/search-bar.tsx");
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./actions */ "./src/components/header/actions.ts");
+/* harmony import */ var _header_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./header.scss */ "./src/components/header/header.scss");
+/* harmony import */ var _header_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_header_scss__WEBPACK_IMPORTED_MODULE_6__);
 
 
 
 
 
-function Header() {
+
+
+function Header(props) {
     return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", { className: 'header' },
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'header__logo' },
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_logo_logo__WEBPACK_IMPORTED_MODULE_1__["default"], null)),
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_logo_logo__WEBPACK_IMPORTED_MODULE_2__["default"], null)),
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'header__navigation-bar' },
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_navigation_bar_navigation_bar__WEBPACK_IMPORTED_MODULE_2__["default"], null)),
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_navigation_bar_navigation_bar__WEBPACK_IMPORTED_MODULE_3__["default"], null)),
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'header__search-bar' },
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_search_bar_search_bar__WEBPACK_IMPORTED_MODULE_3__["default"], null))));
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_search_bar_search_bar__WEBPACK_IMPORTED_MODULE_4__["default"], { searchBarAction: props.searchBarAction }))));
 }
-/* harmony default export */ __webpack_exports__["default"] = (Header);
+var mapStateToProps = function (state) {
+    return state;
+};
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, _actions__WEBPACK_IMPORTED_MODULE_5__["default"])(Header));
 
 
 /***/ }),
@@ -33363,16 +33392,26 @@ var __extends = (undefined && undefined.__extends) || (function () {
 var SearchBar = /** @class */ (function (_super) {
     __extends(SearchBar, _super);
     function SearchBar() {
-        return _super !== null && _super.apply(this, arguments) || this;
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.inputRef = react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
+        /* constructor(props: IProps) {
+          super(props);
+        } */
+        _this.handleButtonClick = function (event) {
+            event.preventDefault();
+            var text = _this.inputRef.current.value;
+            _this.props.searchBarAction(text);
+        };
+        return _this;
     }
     SearchBar.prototype.render = function () {
         var _a = this.props, _b = _a.title, title = _b === void 0 ? '' : _b, _c = _a.placeholder, placeholder = _c === void 0 ? 'Поиск по названию картины' : _c, _d = _a.value, value = _d === void 0 ? '' : _d;
         return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'search-bar' },
             title ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", { className: 'search-bar__title' }, title) : null,
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", { className: 'search-bar__container' },
-                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", { className: 'search-bar__input', placeholder: placeholder, defaultValue: value }),
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", { ref: this.inputRef, className: 'search-bar__input', placeholder: placeholder, defaultValue: value }),
                 react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'search-bar__button' },
-                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_button_button__WEBPACK_IMPORTED_MODULE_1__["default"], { text: '\u041D\u0430\u0439\u0442\u0438' })))));
+                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_button_button__WEBPACK_IMPORTED_MODULE_1__["default"], { text: '\u041D\u0430\u0439\u0442\u0438', handleClick: this.handleButtonClick })))));
     };
     return SearchBar;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component));
@@ -33632,11 +33671,14 @@ react_dom__WEBPACK_IMPORTED_MODULE_2___default.a.render(react__WEBPACK_IMPORTED_
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _storage_Products_actions_CreateItemAction__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../storage/Products/actions/CreateItemAction */ "./src/storage/Products/actions/CreateItemAction.ts");
 /* harmony import */ var _storage_Products_actions_UpdateItemAction__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../storage/Products/actions/UpdateItemAction */ "./src/storage/Products/actions/UpdateItemAction.ts");
+/* harmony import */ var _storage_SearchBar_actions_SearchBarAction__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../storage/SearchBar/actions/SearchBarAction */ "./src/storage/SearchBar/actions/SearchBarAction.ts");
+
 
 
 var actions = {
-    CreateItemAction: _storage_Products_actions_CreateItemAction__WEBPACK_IMPORTED_MODULE_0__["default"],
-    UpdateItemAction: _storage_Products_actions_UpdateItemAction__WEBPACK_IMPORTED_MODULE_1__["default"],
+    createItemAction: _storage_Products_actions_CreateItemAction__WEBPACK_IMPORTED_MODULE_0__["default"],
+    updateItemAction: _storage_Products_actions_UpdateItemAction__WEBPACK_IMPORTED_MODULE_1__["default"],
+    searchBarAction: _storage_SearchBar_actions_SearchBarAction__WEBPACK_IMPORTED_MODULE_2__["default"],
 };
 /* harmony default export */ __webpack_exports__["default"] = (actions);
 
@@ -33688,17 +33730,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./actions */ "./src/pages/prod-pages/products-list/actions.ts");
 /* harmony import */ var _products_list_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./products-list.scss */ "./src/pages/prod-pages/products-list/products-list.scss");
 /* harmony import */ var _products_list_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_products_list_scss__WEBPACK_IMPORTED_MODULE_4__);
+var __spreadArrays = (undefined && undefined.__spreadArrays) || function () {
+    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+            r[k] = a[j];
+    return r;
+};
 
 
 
 
 
 function ProductsList(props) {
-    var products = props.products;
+    var products = props.products, searchBar = props.searchBar;
+    var activeProducts = searchBar.textPattern ? __spreadArrays(searchBar.matchedProducts) : __spreadArrays(products.allProducts);
     return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'products-list' },
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'products-list__container' },
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", { className: 'products-list__title' }, "\u041A\u0430\u0440\u0442\u0438\u043D\u044B \u044D\u043F\u043E\u0445\u0438 \u0412\u043E\u0437\u0440\u043E\u0436\u0434\u0435\u043D\u0438\u044F"),
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", { className: 'products-list__list' }, products.allProducts.map(function (product) {
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", { className: 'products-list__list' }, activeProducts.map(function (product) {
                 return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", { className: 'products-list__item', key: "products-list__item_" + product.id },
                     react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_product_block_product_block__WEBPACK_IMPORTED_MODULE_2__["default"], { product: product })));
             })))));
@@ -34013,7 +34063,8 @@ var __assign = (undefined && undefined.__assign) || function () {
 };
 
 var initialState = {
-    text: '',
+    textPattern: '',
+    matchedProducts: [],
 };
 var SearchBarReducer = /** @class */ (function (_super) {
     __extends(SearchBarReducer, _super);
@@ -34025,6 +34076,12 @@ var SearchBarReducer = /** @class */ (function (_super) {
             _this.state = __assign({}, state);
             switch (action.type) {
                 case 'FIND_ITEMS': {
+                    _this.state.textPattern = action.textPattern;
+                    if (action.textPattern)
+                        _this.state.matchedProducts = _this.selectProductsByPattern(_this.state.textPattern);
+                    /* else {
+                      this.state.products = [];
+                    } */
                     break;
                 }
                 default: {
@@ -34035,12 +34092,41 @@ var SearchBarReducer = /** @class */ (function (_super) {
         };
         return _this;
     }
+    SearchBarReducer.prototype.selectProductsByPattern = function (text) {
+        var allProducts = this.reducerManager.productsReducer.state.allProducts;
+        var pattern = new RegExp("" + text, 'gi');
+        var products = allProducts.filter(function (product) {
+            var match = product.name.match(pattern);
+            return match;
+        });
+        return products;
+    };
     return SearchBarReducer;
 }(_Reducer__WEBPACK_IMPORTED_MODULE_0__["default"]));
 /* harmony default export */ __webpack_exports__["default"] = (SearchBarReducer);
 
 
+/***/ }),
+
+/***/ "./src/storage/SearchBar/actions/SearchBarAction.ts":
+/*!**********************************************************!*\
+  !*** ./src/storage/SearchBar/actions/SearchBarAction.ts ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function searchBarAction(textPattern) {
+    return {
+        type: 'FIND_ITEMS',
+        textPattern: textPattern,
+    };
+}
+/* harmony default export */ __webpack_exports__["default"] = (searchBarAction);
+
+
 /***/ })
 
 /******/ });
-//# sourceMappingURL=prod-pages.js.map?v=33e733fbc6c1b980061a
+//# sourceMappingURL=prod-pages.js.map?v=dae96a752ca0094a0140

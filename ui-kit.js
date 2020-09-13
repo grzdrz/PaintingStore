@@ -29330,7 +29330,10 @@ __webpack_require__.r(__webpack_exports__);
 
 function Button(props) {
     var text = props.text, withCheckMark = props.withCheckMark, disabled = props.disabled;
-    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", { className: "button " + (props.withCheckMark ? 'button_with-check-mark' : ''), disabled: disabled },
+    var handleButtonClick = function (event) {
+        props.handleClick(event);
+    };
+    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", { className: "button " + (props.withCheckMark ? 'button_with-check-mark' : ''), disabled: disabled, onClick: handleButtonClick },
         props.withCheckMark ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'button__check-mark' }, "check") : null,
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'button__text' }, props.text)));
 }
@@ -29414,16 +29417,26 @@ var __extends = (undefined && undefined.__extends) || (function () {
 var SearchBar = /** @class */ (function (_super) {
     __extends(SearchBar, _super);
     function SearchBar() {
-        return _super !== null && _super.apply(this, arguments) || this;
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.inputRef = react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
+        /* constructor(props: IProps) {
+          super(props);
+        } */
+        _this.handleButtonClick = function (event) {
+            event.preventDefault();
+            var text = _this.inputRef.current.value;
+            _this.props.searchBarAction(text);
+        };
+        return _this;
     }
     SearchBar.prototype.render = function () {
         var _a = this.props, _b = _a.title, title = _b === void 0 ? '' : _b, _c = _a.placeholder, placeholder = _c === void 0 ? 'Поиск по названию картины' : _c, _d = _a.value, value = _d === void 0 ? '' : _d;
         return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'search-bar' },
             title ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", { className: 'search-bar__title' }, title) : null,
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", { className: 'search-bar__container' },
-                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", { className: 'search-bar__input', placeholder: placeholder, defaultValue: value }),
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", { ref: this.inputRef, className: 'search-bar__input', placeholder: placeholder, defaultValue: value }),
                 react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'search-bar__button' },
-                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_button_button__WEBPACK_IMPORTED_MODULE_1__["default"], { text: '\u041D\u0430\u0439\u0442\u0438' })))));
+                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_button_button__WEBPACK_IMPORTED_MODULE_1__["default"], { text: '\u041D\u0430\u0439\u0442\u0438', handleClick: this.handleButtonClick })))));
     };
     return SearchBar;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component));
@@ -29647,4 +29660,4 @@ react_dom__WEBPACK_IMPORTED_MODULE_2___default.a.render(react__WEBPACK_IMPORTED_
 /***/ })
 
 /******/ });
-//# sourceMappingURL=ui-kit.js.map?v=33e733fbc6c1b980061a
+//# sourceMappingURL=ui-kit.js.map?v=dae96a752ca0094a0140
