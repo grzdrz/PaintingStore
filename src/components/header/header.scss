@@ -1,20 +1,127 @@
+@import '../../assets/constants.scss';
+
 .header {
   width: 100%;
-  display: grid;
-  grid-template-columns: min-content auto min-content;
-  align-items: center;
-  padding: 1.35rem 22rem;
+  display: flex;
+  justify-content: center;
+  padding: 1.35rem 0rem;
   border-bottom: 1px solid rgb(225, 225, 225);
 
+  &__container {
+    width: 1215px;
+    display: grid;
+    grid-template-columns: min-content auto min-content;
+    align-items: center;
+
+    @media screen and (max-width: 1440px) {
+      width: 100%;
+      padding: 0rem 6.875rem;
+    }
+    @media screen and (max-width: 1300px) {
+      grid-template-columns: auto min-content;
+      grid-template-rows: auto auto;
+    }
+    @media screen and (max-width: 1200px) {
+      grid-template-columns: auto;
+      grid-template-rows: auto auto auto auto;
+    }
+    @media screen and (max-width: 630px) {
+      padding: 0rem 17%;
+    }
+  }
+
   &__logo {
+    display: flex;
+    justify-content: space-between;
     padding-top: 0.1rem;
+
+    @media screen and (max-width: 1300px) {
+      padding-bottom: 0.625rem;
+      margin-bottom: 0.625rem;
+      border-bottom: 0.125rem solid $color-red-brown;
+      &_closed {
+        border-bottom: 0rem solid $color-dark-brown;
+        padding-bottom: 0rem;
+        margin-bottom: 0rem;
+      }
+    }
+    @media screen and (max-width: 1300px) and (min-width: 1200px) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
   }
 
   &__navigation-bar {
     margin-left: 3rem;
+
+    @media screen and (max-width: 1300px) {
+      margin-left: 0rem;
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+      &_closed {
+        display: none;
+      }
+    }
   }
 
   &__search-bar {
     width: 416px;
+
+    @media screen and (max-width: 1300px) {
+      margin: 10px 0px;
+
+      &_closed {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 630px) {
+      width: 100%;
+    }
+  }
+
+  &__burger {
+    cursor: pointer;
+    width: 3.125rem;
+    height: 3.125rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 0.75rem;
+    background: $color-dark-brown;
+    /* border-radius: 0.25rem; */
+
+    @media screen and (max-width: 1300px) {
+      display: flex;
+      justify-self: flex-end;
+
+      &_closed {
+        background: $color-red-brown;
+      }
+    }
+  }
+
+  &__burger-element {
+    width: 1.875rem;
+    height: 0.25rem;
+    background: white;
+
+    &_opened {
+      &:nth-of-type(3) {
+        display: none;
+      }
+      &:nth-of-type(1) {
+        position: absolute;
+        top: 1.375rem;
+        transform: rotate(45deg);
+      }
+      &:nth-of-type(2) {
+        position: absolute;
+        top: 1.375rem;
+        transform: rotate(-45deg);
+      }
+    }
   }
 }

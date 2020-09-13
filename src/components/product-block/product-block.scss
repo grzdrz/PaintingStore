@@ -1,9 +1,10 @@
 .product-block {
+  width: 17.5rem;
   display: flex;
   flex-direction: column;
   border: 1px solid rgb(225, 225, 225);
 
-  &_is-sold{
+  &_is-sold {
     opacity: 0.5;
   }
 

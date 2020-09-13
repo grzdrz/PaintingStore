@@ -8,14 +8,16 @@ import './footer.scss';
 function Footer() {
   return (
     <footer className='footer'>
-      <div className='footer__logo'>
-        <Logo />
+      <div className='footer__container'>
+        <div className='footer__logo'>
+          <Logo />
+        </div>
+        <div className='footer__navigation-bar'>
+          <NavigationBar />
+        </div>
+        <p className='footer__phone'><PhoneSymbol />+7 (495) 555-55-55</p>
+        <p className='footer__address'><AddressSymbol />г. Москва, ул. Расплетина, 24</p>
       </div>
-      <div className='footer__navigation-bar'>
-        <NavigationBar />
-      </div>
-      <p className='footer__phone'><PhoneSymbol />+7 (495) 555-55-55</p>
-      <p className='footer__address'><AddressSymbol />г. Москва, ул. Расплетина, 24</p>
     </footer>
   );
 }

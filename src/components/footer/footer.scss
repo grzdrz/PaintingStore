@@ -1,10 +1,33 @@
 .footer {
   width: 100%;
-  display: grid;
-  grid-template-columns: min-content auto max-content max-content;
-  align-items: center;
-  padding: 1.35rem 22rem;
+  display: flex;
+  justify-content: center;
+  padding: 1.35rem 0rem;
   background: rgb(236, 234, 234);
+
+  &__container {
+    width: 1215px;
+    display: grid;
+    grid-template-columns: min-content auto max-content max-content;
+    align-items: center;
+
+    @media screen and (max-width: 1440px) {
+      width: 100%;
+      padding: 0rem 6.875rem;
+    }
+    @media screen and (max-width: 1400px) {
+      grid-template-columns: max-content auto max-content;
+    }
+    @media screen and (max-width: 1300px) {
+      grid-template-columns: max-content auto;
+    }
+    @media screen and (max-width: 900px) {
+      grid-template-columns: max-content;
+    }
+    @media screen and (max-width: 630px) {
+      padding: 0rem 17%;
+    }
+  }
 
   &__logo {
     padding-top: 0.1rem;
@@ -12,6 +35,16 @@
 
   &__navigation-bar {
     margin-left: 3rem;
+
+    @media screen and (max-width: 1300px) {
+      justify-self: end;
+    }
+    @media screen and (max-width: 900px) {
+      margin: 10px 0px;
+    }
+    @media screen and (max-width: 720px) {
+      justify-self: start;
+    }
   }
 
   &__phone {
@@ -24,6 +57,14 @@
     &-symbol {
       margin-right: 0.6rem;
     }
+
+    @media screen and (max-width: 1300px) {
+      margin: 10px 0px;
+    }
+    @media screen and (max-width: 1300px) and (min-width: 900px) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
   }
 
   &__address {
@@ -34,6 +75,14 @@
 
     &-symbol {
       margin-right: 0.65rem;
+    }
+
+    @media screen and (max-width: 1400px) {
+      margin: 10px 0px;
+    }
+    @media screen and (max-width: 1400px) and (min-width: 900px) {
+      grid-column-start: 1;
+      grid-column-end: 3;
     }
   }
 }
