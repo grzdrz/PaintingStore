@@ -28967,10 +28967,10 @@ var map = {
 	"./components/logo/images/logo.svg": "./src/components/logo/images/logo.svg",
 	"./components/test-component/images/абрикос-1.jpg": "./src/components/test-component/images/абрикос-1.jpg",
 	"./components/test-component/images/ананас-2.jpg": "./src/components/test-component/images/ананас-2.jpg",
-	"./data/images/painting-0.jpg": "./src/data/images/painting-0.jpg",
 	"./data/images/painting-1.jpg": "./src/data/images/painting-1.jpg",
 	"./data/images/painting-2.jpg": "./src/data/images/painting-2.jpg",
-	"./data/images/painting-3.jpg": "./src/data/images/painting-3.jpg"
+	"./data/images/painting-3.jpg": "./src/data/images/painting-3.jpg",
+	"./data/images/painting-4.jpg": "./src/data/images/painting-4.jpg"
 };
 
 
@@ -29471,19 +29471,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/data/images/painting-0.jpg":
-/*!****************************************!*\
-  !*** ./src/data/images/painting-0.jpg ***!
-  \****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/data/images/painting-0.jpg");
-
-/***/ }),
-
 /***/ "./src/data/images/painting-1.jpg":
 /*!****************************************!*\
   !*** ./src/data/images/painting-1.jpg ***!
@@ -29520,6 +29507,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/data/images/painting-3.jpg");
+
+/***/ }),
+
+/***/ "./src/data/images/painting-4.jpg":
+/*!****************************************!*\
+  !*** ./src/data/images/painting-4.jpg ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/data/images/painting-4.jpg");
 
 /***/ }),
 
@@ -29660,4 +29660,4 @@ react_dom__WEBPACK_IMPORTED_MODULE_2___default.a.render(react__WEBPACK_IMPORTED_
 /***/ })
 
 /******/ });
-//# sourceMappingURL=ui-kit.js.map?v=a4b5801541f142cb7f8b
+//# sourceMappingURL=ui-kit.js.map?v=be4ba9e9f4fb0425bc5b

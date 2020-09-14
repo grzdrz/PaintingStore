@@ -32511,10 +32511,10 @@ var map = {
 	"./components/logo/images/logo.svg": "./src/components/logo/images/logo.svg",
 	"./components/test-component/images/абрикос-1.jpg": "./src/components/test-component/images/абрикос-1.jpg",
 	"./components/test-component/images/ананас-2.jpg": "./src/components/test-component/images/ананас-2.jpg",
-	"./data/images/painting-0.jpg": "./src/data/images/painting-0.jpg",
 	"./data/images/painting-1.jpg": "./src/data/images/painting-1.jpg",
 	"./data/images/painting-2.jpg": "./src/data/images/painting-2.jpg",
-	"./data/images/painting-3.jpg": "./src/data/images/painting-3.jpg"
+	"./data/images/painting-3.jpg": "./src/data/images/painting-3.jpg",
+	"./data/images/painting-4.jpg": "./src/data/images/painting-4.jpg"
 };
 
 
@@ -33342,32 +33342,123 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _button_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../button/button */ "./src/components/button/button.tsx");
 /* harmony import */ var _product_block_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./product-block.scss */ "./src/components/product-block/product-block.scss");
 /* harmony import */ var _product_block_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_product_block_scss__WEBPACK_IMPORTED_MODULE_4__);
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
 
 
 
 
 
-function ProductBlock(props) {
-    var product = props.product;
-    return (react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: "product-block " + (product.isSold ? 'product-block_is-sold' : '') },
-        react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: 'product-block__image-container' },
-            react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("img", { className: 'product-block__image', src: (_compilationOptions__WEBPACK_IMPORTED_MODULE_1__["default"].forGithubPages ? '/Redsoft_Task' : '') + "/src/data/images/painting-" + product.id + ".jpg" })),
-        react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: 'product-block__description' },
-            react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", { className: 'product-block__name-and-author' },
-                react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", { className: 'product-block__name' }, "\u00AB" + product.name + "\u00BB"),
-                react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", { className: 'product-block__author' }, product.author)),
-            product.isSold
-                ? (react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", { className: 'product-block__sold-text' }, "\u041F\u0440\u043E\u0434\u0430\u043D\u0430 \u043D\u0430 \u0430\u0443\u043A\u0446\u0438\u043E\u043D\u0435"))
-                : (react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: 'product-block__prices-and-buying-button' },
-                    react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: 'product-block__prices' },
-                        product.oldPrice !== undefined
-                            ? (react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", { className: 'product-block__old-price' },
-                                react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", { className: 'product-block__old-price-number' }, Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])(product.oldPrice) + " " + product.currencyType))) : null,
-                        react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", { className: 'product-block__price' },
-                            react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", { className: 'product-block__price-number' }, Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])(product.price) + " " + product.currencyType))),
-                    react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: 'product-block__buying-button' },
-                        react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_button_button__WEBPACK_IMPORTED_MODULE_3__["default"], { text: '\u041A\u0443\u043F\u0438\u0442\u044C' })))))));
-}
+var ProductBlock = /** @class */ (function (_super) {
+    __extends(ProductBlock, _super);
+    function ProductBlock() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    ProductBlock.prototype.handleButtonClick = function (event) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _a, product, buyingProductAction, url, response, breakpoint, json;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        _a = this.props, product = _a.product, buyingProductAction = _a.buyingProductAction;
+                        buyingProductAction({
+                            isFetching: true,
+                        });
+                        url = "https://jsonplaceholder.typicode.com/posts/" + product.id;
+                        return [4 /*yield*/, fetch(url)];
+                    case 1:
+                        response = _b.sent();
+                        breakpoint = 1412;
+                        if (!response.ok) return [3 /*break*/, 3];
+                        return [4 /*yield*/, response.json()];
+                    case 2:
+                        json = _b.sent();
+                        buyingProductAction({
+                            isFetching: false,
+                            productId: product.id,
+                        });
+                        return [3 /*break*/, 4];
+                    case 3:
+                        buyingProductAction({
+                            isFetching: false,
+                        });
+                        _b.label = 4;
+                    case 4: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    ProductBlock.prototype.render = function () {
+        var _a = this.props, product = _a.product, productsInCart = _a.productsInCart;
+        var hasInCart = productsInCart.includes(product.id);
+        return (react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: "product-block " + (product.isSold ? 'product-block_is-sold' : '') },
+            react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: 'product-block__image-container' },
+                react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("img", { className: 'product-block__image', src: (_compilationOptions__WEBPACK_IMPORTED_MODULE_1__["default"].forGithubPages ? '/Redsoft_Task' : '') + "/src/data/images/painting-" + product.id + ".jpg" })),
+            react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: 'product-block__description' },
+                react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", { className: 'product-block__name-and-author' },
+                    react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", { className: 'product-block__name' }, "\u00AB" + product.name + "\u00BB"),
+                    react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", { className: 'product-block__author' }, product.author)),
+                product.isSold
+                    ? (react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", { className: 'product-block__sold-text' }, "\u041F\u0440\u043E\u0434\u0430\u043D\u0430 \u043D\u0430 \u0430\u0443\u043A\u0446\u0438\u043E\u043D\u0435"))
+                    : (react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: 'product-block__prices-and-buying-button' },
+                        react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: 'product-block__prices' },
+                            product.oldPrice !== undefined
+                                ? (react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", { className: 'product-block__old-price' },
+                                    react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", { className: 'product-block__old-price-number' }, Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])(product.oldPrice) + " " + product.currencyType))) : null,
+                            react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", { className: 'product-block__price' },
+                                react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", { className: 'product-block__price-number' }, Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])(product.price) + " " + product.currencyType))),
+                        react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: 'product-block__buying-button' },
+                            react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_button_button__WEBPACK_IMPORTED_MODULE_3__["default"], { text: '\u041A\u0443\u043F\u0438\u0442\u044C', withCheckMark: hasInCart, handleClick: this.handleButtonClick.bind(this) })))))));
+    };
+    return ProductBlock;
+}(react__WEBPACK_IMPORTED_MODULE_2___default.a.Component));
 /* harmony default export */ __webpack_exports__["default"] = (ProductBlock);
 
 
@@ -33489,19 +33580,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/data/images/painting-0.jpg":
-/*!****************************************!*\
-  !*** ./src/data/images/painting-0.jpg ***!
-  \****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/data/images/painting-0.jpg");
-
-/***/ }),
-
 /***/ "./src/data/images/painting-1.jpg":
 /*!****************************************!*\
   !*** ./src/data/images/painting-1.jpg ***!
@@ -33541,6 +33619,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/data/images/painting-4.jpg":
+/*!****************************************!*\
+  !*** ./src/data/images/painting-4.jpg ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/data/images/painting-4.jpg");
+
+/***/ }),
+
 /***/ "./src/data/productsData.json":
 /*!************************************!*\
   !*** ./src/data/productsData.json ***!
@@ -33548,7 +33639,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! exports provided: products, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"products\":[{\"id\":0,\"name\":\"Рождение Венеры\",\"author\":\"Сандро Боттичелли\",\"price\":1000000,\"oldPrice\":2000000,\"currencyType\":\"$\",\"isSold\":false},{\"id\":1,\"name\":\"Тайная вечеря\",\"author\":\"Леонардо да Винчи\",\"price\":3000000,\"currencyType\":\"$\",\"isSold\":false},{\"id\":2,\"name\":\"Сотворение Адама\",\"author\":\"Микеланджело\",\"price\":5000000,\"oldPrice\":6000000,\"currencyType\":\"$\",\"isSold\":false},{\"id\":3,\"name\":\"Урок анатомии\",\"author\":\"Рембрандт\",\"isSold\":true}]}");
+module.exports = JSON.parse("{\"products\":[{\"id\":1,\"name\":\"Рождение Венеры\",\"author\":\"Сандро Боттичелли\",\"price\":1000000,\"oldPrice\":2000000,\"currencyType\":\"$\",\"isSold\":false},{\"id\":2,\"name\":\"Тайная вечеря\",\"author\":\"Леонардо да Винчи\",\"price\":3000000,\"currencyType\":\"$\",\"isSold\":false},{\"id\":3,\"name\":\"Сотворение Адама\",\"author\":\"Микеланджело\",\"price\":5000000,\"oldPrice\":6000000,\"currencyType\":\"$\",\"isSold\":false},{\"id\":4,\"name\":\"Урок анатомии\",\"author\":\"Рембрандт\",\"isSold\":true}]}");
 
 /***/ }),
 
@@ -33648,10 +33739,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _storage_ReducerManager__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../storage/ReducerManager */ "./src/storage/ReducerManager.ts");
 /* harmony import */ var _components_header_header__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/header/header */ "./src/components/header/header.tsx");
-/* harmony import */ var _components_footer_footer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/footer/footer */ "./src/components/footer/footer.tsx");
-/* harmony import */ var _prod_pages_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./prod-pages.scss */ "./src/pages/prod-pages/prod-pages.scss");
-/* harmony import */ var _prod_pages_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_prod_pages_scss__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _products_list_products_list__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./products-list/products-list */ "./src/pages/prod-pages/products-list/products-list.tsx");
+/* harmony import */ var _products_list_products_list__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./products-list/products-list */ "./src/pages/prod-pages/products-list/products-list.tsx");
+/* harmony import */ var _components_footer_footer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/footer/footer */ "./src/components/footer/footer.tsx");
+/* harmony import */ var _prod_pages_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./prod-pages.scss */ "./src/pages/prod-pages/prod-pages.scss");
+/* harmony import */ var _prod_pages_scss__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_prod_pages_scss__WEBPACK_IMPORTED_MODULE_9__);
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -33685,9 +33776,9 @@ var App = /** @class */ (function (_super) {
             react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", { className: 'prod-pages__header' },
                 react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_header_header__WEBPACK_IMPORTED_MODULE_6__["default"], null)),
             react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", { className: 'prod-pages__products-list' },
-                react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_products_list_products_list__WEBPACK_IMPORTED_MODULE_9__["default"], null)),
+                react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_products_list_products_list__WEBPACK_IMPORTED_MODULE_7__["default"], null)),
             react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", { className: 'prod-pages__footer' },
-                react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_footer_footer__WEBPACK_IMPORTED_MODULE_7__["default"], null))));
+                react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_footer_footer__WEBPACK_IMPORTED_MODULE_8__["default"], null))));
     };
     return App;
 }(react__WEBPACK_IMPORTED_MODULE_1___default.a.Component));
@@ -33715,6 +33806,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _storage_Products_actions_CreateItemAction__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../storage/Products/actions/CreateItemAction */ "./src/storage/Products/actions/CreateItemAction.ts");
 /* harmony import */ var _storage_Products_actions_UpdateItemAction__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../storage/Products/actions/UpdateItemAction */ "./src/storage/Products/actions/UpdateItemAction.ts");
 /* harmony import */ var _storage_SearchBar_actions_SearchBarAction__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../storage/SearchBar/actions/SearchBarAction */ "./src/storage/SearchBar/actions/SearchBarAction.ts");
+/* harmony import */ var _storage_BuyingButton_actions_BuyingButtonAction__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../storage/BuyingButton/actions/BuyingButtonAction */ "./src/storage/BuyingButton/actions/BuyingButtonAction.ts");
+
 
 
 
@@ -33722,6 +33815,7 @@ var actions = {
     createItemAction: _storage_Products_actions_CreateItemAction__WEBPACK_IMPORTED_MODULE_0__["default"],
     updateItemAction: _storage_Products_actions_UpdateItemAction__WEBPACK_IMPORTED_MODULE_1__["default"],
     searchBarAction: _storage_SearchBar_actions_SearchBarAction__WEBPACK_IMPORTED_MODULE_2__["default"],
+    buyingProductAction: _storage_BuyingButton_actions_BuyingButtonAction__WEBPACK_IMPORTED_MODULE_3__["default"],
 };
 /* harmony default export */ __webpack_exports__["default"] = (actions);
 
@@ -33786,20 +33880,115 @@ var __spreadArrays = (undefined && undefined.__spreadArrays) || function () {
 
 
 function ProductsList(props) {
-    var products = props.products, searchBar = props.searchBar;
+    var products = props.products, searchBar = props.searchBar, buyingButton = props.buyingButton, buyingProductAction = props.buyingProductAction;
     var activeProducts = searchBar.textPattern ? __spreadArrays(searchBar.matchedProducts) : __spreadArrays(products.allProducts);
+    /* const productInCart = activeProducts.find((product) => {
+      const hasProduct = buyingButton.productsId.includes(product.id);
+      return hasProduct;
+    });
+    const inCart = productInCart ? true : false; */
     return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'products-list' },
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'products-list__container' },
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", { className: 'products-list__title' }, "\u041A\u0430\u0440\u0442\u0438\u043D\u044B \u044D\u043F\u043E\u0445\u0438 \u0412\u043E\u0437\u0440\u043E\u0436\u0434\u0435\u043D\u0438\u044F"),
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", { className: 'products-list__list' }, activeProducts.map(function (product) {
                 return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", { className: 'products-list__item', key: "products-list__item_" + product.id },
-                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_product_block_product_block__WEBPACK_IMPORTED_MODULE_2__["default"], { product: product })));
+                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_product_block_product_block__WEBPACK_IMPORTED_MODULE_2__["default"], { product: product, productsInCart: buyingButton.productsId, buyingProductAction: buyingProductAction })));
             })))));
 }
 var mapStateToProps = function (state) {
     return state;
 };
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, _actions__WEBPACK_IMPORTED_MODULE_3__["default"])(ProductsList));
+
+
+/***/ }),
+
+/***/ "./src/storage/BuyingButton/BuyingButtonReducer.ts":
+/*!*********************************************************!*\
+  !*** ./src/storage/BuyingButton/BuyingButtonReducer.ts ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Reducer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Reducer */ "./src/storage/Reducer.ts");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __assign = (undefined && undefined.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+
+var initialState = {
+    isFetching: false,
+    productsId: [],
+};
+var BuyingButtonReducer = /** @class */ (function (_super) {
+    __extends(BuyingButtonReducer, _super);
+    function BuyingButtonReducer(reducerManager, state) {
+        if (state === void 0) { state = __assign({}, initialState); }
+        var _this = _super.call(this, reducerManager, state) || this;
+        _this.reduce = function (state, action) {
+            if (state === void 0) { state = _this.state; }
+            _this.state = __assign({}, state);
+            switch (action.type) {
+                case 'BUY_PRODUCT': {
+                    if (!action.productForBuying.isFetching && action.productForBuying.productId !== undefined) {
+                        _this.addProduct(action.productForBuying.productId);
+                    }
+                    break;
+                }
+            }
+            return _this.state;
+        };
+        return _this;
+    }
+    BuyingButtonReducer.prototype.addProduct = function (id) {
+        if (!this.state.productsId.includes(id))
+            this.state.productsId.push(id);
+    };
+    return BuyingButtonReducer;
+}(_Reducer__WEBPACK_IMPORTED_MODULE_0__["default"]));
+/* harmony default export */ __webpack_exports__["default"] = (BuyingButtonReducer);
+
+
+/***/ }),
+
+/***/ "./src/storage/BuyingButton/actions/BuyingButtonAction.ts":
+/*!****************************************************************!*\
+  !*** ./src/storage/BuyingButton/actions/BuyingButtonAction.ts ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function buyingButtonAction(productForBuying) {
+    return {
+        type: 'BUY_PRODUCT',
+        productForBuying: productForBuying,
+    };
+}
+/* harmony default export */ __webpack_exports__["default"] = (buyingButtonAction);
 
 
 /***/ }),
@@ -33852,7 +34041,7 @@ var initialState = {
     activeProducts: [],
 };
 var baseProduct = {
-    id: 0,
+    id: 1,
     name: 'Черный квадрат',
     author: 'Малевич',
     price: 100500,
@@ -34049,18 +34238,22 @@ var Reducer = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
-/* harmony import */ var _Products_ProductsReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Products/ProductsReducer */ "./src/storage/Products/ProductsReducer.ts");
-/* harmony import */ var _SearchBar_SearchBarReducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SearchBar/SearchBarReducer */ "./src/storage/SearchBar/SearchBarReducer.ts");
+/* harmony import */ var _BuyingButton_BuyingButtonReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BuyingButton/BuyingButtonReducer */ "./src/storage/BuyingButton/BuyingButtonReducer.ts");
+/* harmony import */ var _Products_ProductsReducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Products/ProductsReducer */ "./src/storage/Products/ProductsReducer.ts");
+/* harmony import */ var _SearchBar_SearchBarReducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./SearchBar/SearchBarReducer */ "./src/storage/SearchBar/SearchBarReducer.ts");
+
 
 
 
 var ReducerManager = /** @class */ (function () {
     function ReducerManager() {
-        this.productsReducer = new _Products_ProductsReducer__WEBPACK_IMPORTED_MODULE_1__["default"](this);
-        this.searchBarReducer = new _SearchBar_SearchBarReducer__WEBPACK_IMPORTED_MODULE_2__["default"](this);
+        this.productsReducer = new _Products_ProductsReducer__WEBPACK_IMPORTED_MODULE_2__["default"](this);
+        this.searchBarReducer = new _SearchBar_SearchBarReducer__WEBPACK_IMPORTED_MODULE_3__["default"](this);
+        this.buyingButtonReducer = new _BuyingButton_BuyingButtonReducer__WEBPACK_IMPORTED_MODULE_1__["default"](this);
         this.reducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
             products: this.productsReducer.reduce,
             searchBar: this.searchBarReducer.reduce,
+            buyingButton: this.buyingButtonReducer.reduce,
         });
     }
     return ReducerManager;
@@ -34172,4 +34365,4 @@ function searchBarAction(textPattern) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=prod-pages.js.map?v=a4b5801541f142cb7f8b
+//# sourceMappingURL=prod-pages.js.map?v=be4ba9e9f4fb0425bc5b
