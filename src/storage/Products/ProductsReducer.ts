@@ -12,7 +12,7 @@ const initialState: IProductsState = {
 };
 
 const baseProduct: IProduct = {
-  id: 0,
+  id: 1,
   name: 'Черный квадрат',
   author: 'Малевич',
   price: 100500,

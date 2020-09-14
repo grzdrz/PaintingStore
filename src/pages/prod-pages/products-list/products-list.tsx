@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ProductBlock from '../../../components/product-block/product-block';
+import buyingButtonAction from '../../../storage/BuyingButton/actions/BuyingButtonAction';
+import IBuyingButtonState from '../../../storage/BuyingButton/IBuyingButtonState';
 import IReducedState from '../../../storage/IReducedState';
 import IProductsState from '../../../storage/Products/IProductsState';
 import ISearchBarState from '../../../storage/SearchBar/ISearchBarState';
@@ -9,12 +11,24 @@ import './products-list.scss';
 
 interface IProps {
   products: IProductsState,
-  searchBar: ISearchBarState
+  searchBar: ISearchBarState,
+  buyingButton: IBuyingButtonState,
+  buyingProductAction: typeof buyingButtonAction,
 }
 
 function ProductsList(props: IProps) {
-  const { products, searchBar } = props;
+  const {
+    products,
+    searchBar,
+    buyingButton,
+    buyingProductAction,
+  } = props;
   const activeProducts = searchBar.textPattern ? [...searchBar.matchedProducts] : [...products.allProducts];
+  /* const productInCart = activeProducts.find((product) => {
+    const hasProduct = buyingButton.productsId.includes(product.id);
+    return hasProduct;
+  });
+  const inCart = productInCart ? true : false; */
 
   return (
     <div className='products-list'>
@@ -26,6 +40,8 @@ function ProductsList(props: IProps) {
               <li className='products-list__item' key={`products-list__item_${product.id}`}>
                 <ProductBlock
                   product={product}
+                  productsInCart={buyingButton.productsId}
+                  buyingProductAction={buyingProductAction}
                 />
               </li>
             );

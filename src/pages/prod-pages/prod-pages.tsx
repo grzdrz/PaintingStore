@@ -7,10 +7,11 @@ import { Provider } from 'react-redux';
 import ReducerManager from '../../storage/ReducerManager';
 
 import Header from '../../components/header/header';
+import ProductsList from './products-list/products-list';
 import Footer from '../../components/footer/footer';
 
 import './prod-pages.scss';
-import ProductsList from './products-list/products-list';
+
 
 class App extends React.Component {
   render() {
