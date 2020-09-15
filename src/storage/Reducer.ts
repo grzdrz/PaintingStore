@@ -1,6 +1,5 @@
 import IAction from "./IAction";
 import ReducerManager from "./ReducerManager";
-import IProductsState from "./Products/IProductsState";
 
 abstract class Reducer<TState> {
   public reducerManager: ReducerManager;

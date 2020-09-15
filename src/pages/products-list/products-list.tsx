@@ -1,34 +1,32 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import ProductBlock from '../../../components/product-block/product-block';
-import buyingButtonAction from '../../../storage/BuyingButton/actions/BuyingButtonAction';
-import IBuyingButtonState from '../../../storage/BuyingButton/IBuyingButtonState';
-import IReducedState from '../../../storage/IReducedState';
-import IProductsState from '../../../storage/Products/IProductsState';
-import ISearchBarState from '../../../storage/SearchBar/ISearchBarState';
+import ProductBlock from '../../components/product-block/product-block';
+import IReducedState from '../../storage/IReducedState';
+import IProductsState from '../../storage/Products/IProductsState';
+import ISearchBarState from '../../storage/SearchBar/ISearchBarState';
+import shoppingCartPopAction from '../../storage/ShoppingCart/actions/ShoppingCartPopAction';
+import shoppingCartPushAction from '../../storage/ShoppingCart/actions/ShoppingCartPushAction';
+import IShoppingCartState from '../../storage/ShoppingCart/IShoppingCartState';
 import actions from './actions';
 import './products-list.scss';
 
 interface IProps {
   products: IProductsState,
   searchBar: ISearchBarState,
-  buyingButton: IBuyingButtonState,
-  buyingProductAction: typeof buyingButtonAction,
+  shoppingCart: IShoppingCartState,
+  shoppingCartPushAction: typeof shoppingCartPushAction,
+  shoppingCartPopAction: typeof shoppingCartPopAction,
 }
 
 function ProductsList(props: IProps) {
   const {
     products,
     searchBar,
-    buyingButton,
-    buyingProductAction,
+    shoppingCart,
+    shoppingCartPushAction,
+    shoppingCartPopAction,
   } = props;
   const activeProducts = searchBar.textPattern ? [...searchBar.matchedProducts] : [...products.allProducts];
-  /* const productInCart = activeProducts.find((product) => {
-    const hasProduct = buyingButton.productsId.includes(product.id);
-    return hasProduct;
-  });
-  const inCart = productInCart ? true : false; */
 
   return (
     <div className='products-list'>
@@ -40,8 +38,9 @@ function ProductsList(props: IProps) {
               <li className='products-list__item' key={`products-list__item_${product.id}`}>
                 <ProductBlock
                   product={product}
-                  productsInCart={buyingButton.productsId}
-                  buyingProductAction={buyingProductAction}
+                  productsInCart={shoppingCart.productsId}
+                  shoppingCartPushAction={shoppingCartPushAction}
+                  shoppingCartPopAction={shoppingCartPopAction}
                 />
               </li>
             );

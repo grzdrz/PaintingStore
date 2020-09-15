@@ -3,37 +3,51 @@ import compilationOptions from '../../compilationOptions';
 import React from 'react';
 import IProduct from '../../storage/Products/IProduct';
 import Button from '../button/button';
-import './product-block.scss'
-import buyingButtonAction from '../../storage/BuyingButton/actions/BuyingButtonAction';
+import shoppingCartPushAction from '../../storage/ShoppingCart/actions/ShoppingCartPushAction';
+import shoppingCartPopAction from '../../storage/ShoppingCart/actions/ShoppingCartPopAction';
+import './product-block.scss';
 
 interface IProps {
   product: IProduct,
   productsInCart: Array<number>,
-  buyingProductAction: typeof buyingButtonAction,
+  shoppingCartPushAction: typeof shoppingCartPushAction,
+  shoppingCartPopAction: typeof shoppingCartPopAction,
 }
 
 class ProductBlock extends React.Component<IProps> {
 
   async handleButtonClick(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
-    const { product, buyingProductAction } = this.props;
+    const {
+      product,
+      productsInCart,
+      shoppingCartPushAction,
+      shoppingCartPopAction,
+    } = this.props;
+    const hasInCart = productsInCart.includes(product.id);
 
-    buyingProductAction({
-      isFetching: true,
-    });
+    if (!hasInCart) {
+      shoppingCartPushAction({
+        isFetching: true,
+      });
 
-    const url = `https://jsonplaceholder.typicode.com/posts/${product.id}`;
-    const response = await fetch(url);
+      const url = `https://jsonplaceholder.typicode.com/posts/${product.id}`;
+      const response = await fetch(url);
 
-    const breakpoint = 1412;
-    if (response.ok) {
-      const json = await response.json();
-      buyingProductAction({
+      if (response.ok) {
+        const json = await response.json();
+        shoppingCartPushAction({
+          isFetching: false,
+          productId: product.id,
+        });
+      } else {
+        shoppingCartPushAction({
+          isFetching: false,
+        });
+      }
+    } else {
+      shoppingCartPopAction({
         isFetching: false,
         productId: product.id,
-      });
-    } else {
-      buyingProductAction({
-        isFetching: false,
       });
     }
   }

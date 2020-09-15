@@ -5,15 +5,15 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const pluginsOptions = [];
 
 const pages = [
-  { pageName: 'index' },
-  { pageName: 'prod-pages' },
-  { pageName: 'ui-kit' },
+  { folder: 'index', pageName: 'index' },
+  { folder: 'prod-page', pageName: 'prod-page', isReduxContainer: true },
+  { folder: 'ui-kit', pageName: 'ui-kit' },
 ];
 pages.forEach((e) => {
   pluginsOptions.push(
     new HtmlWebpackPlugin({
       filename: `./${e.pageName}.html`,
-      template: `./src/pages/${e.pageName}/${e.pageName}.pug`,
+      template: `./src/pages/${e.folder}/${e.pageName}.pug`,
       inject: true,
       chunks: [e.pageName],
     }),
@@ -24,12 +24,12 @@ pluginsOptions.push(new MiniCssExtractPlugin({
 }));
 
 const entries = pages.reduce((obj, curEntry) => {
-  obj[curEntry.pageName] = `./src/pages/${curEntry.pageName}/${curEntry.pageName}.tsx`;
+  obj[curEntry.pageName] = `./src/pages/${curEntry.folder}/${curEntry.pageName}${curEntry.isReduxContainer ? '-container' : ''}.tsx`;
   return obj;
 }, {});
 
 module.exports = {
-  entry: entries/* { index: './src/pages/index/index.tsx' } */,
+  entry: entries,
 
   output: {
     path: path.resolve(__dirname, 'bandle'),
