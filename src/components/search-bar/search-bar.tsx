@@ -10,44 +10,41 @@ interface IProps {
   searchBarAction?: (text: string) => ISearchBarAction,
 }
 
-class SearchBar extends React.Component<IProps> {
-  public inputRef = React.createRef<HTMLInputElement>();
-  /* constructor(props: IProps) {
-    super(props);
-  } */
+function SearchBar(props: IProps) {
+  const {
+    title = '',
+    placeholder = 'Поиск по названию картины',
+    value = '',
+  } = props;
 
-  handleButtonClick = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+  const handleButtonClick = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const text = this.inputRef.current.value;
-    this.props.searchBarAction(text);
-  }
+    const form = event.target as HTMLFormElement;
+    const input = form.querySelector('.search-bar__input') as HTMLInputElement;
+    const text = input.value;
+    props.searchBarAction(text);
+  };
 
-  render() {
-    const {
-      title = '',
-      placeholder = 'Поиск по названию картины',
-      value = '',
-    } = this.props;
-    return (
-      <div className='search-bar'>
-        {title ? <p className='search-bar__title'>{title}</p> : null}
-        <form className='search-bar__container'>
-          <input
-            ref={this.inputRef}
-            className='search-bar__input'
-            placeholder={placeholder}
-            defaultValue={value}
+  return (
+    <div className='search-bar'>
+      {title ? <p className='search-bar__title'>{title}</p> : null}
+      <form
+        className='search-bar__container'
+        onSubmit={handleButtonClick}
+      >
+        <input
+          className='search-bar__input'
+          placeholder={placeholder}
+          defaultValue={value}
+        />
+        <div className='search-bar__button'>
+          <Button
+            text='Найти'
           />
-          <div className='search-bar__button'>
-            <Button
-              text='Найти'
-              handleClick={this.handleButtonClick}
-            />
-          </div>
-        </form>
-      </div>
-    );
-  }
+        </div>
+      </form>
+    </div>
+  );
 }
 
 export default SearchBar;

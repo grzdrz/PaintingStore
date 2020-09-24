@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../../components/header/header';
+import Header from '../../components/header/header-container';
 import ProductsList from '../products-list/products-list';
 import Footer from '../../components/footer/footer';
 import { connect } from 'react-redux';
@@ -11,24 +11,22 @@ interface IProps {
   shoppingCart: IShoppingCartState,
 }
 
-class ProdPage extends React.Component<IProps> {
-  render() {
-    const { shoppingCart } = this.props;
+function ProdPage(props: IProps) {
+  const { shoppingCart } = props;
 
-    return (
-      <div className={`prod-page ${shoppingCart.isFetching ? 'prod-page_disabled' : ''}`}>
-        <div className='prod-page__header'>
-          <Header />
-        </div>
-        <div className='prod-page__products-list'>
-          <ProductsList />
-        </div>
-        <div className='prod-page__footer'>
-          <Footer />
-        </div>
+  return (
+    <div className={`prod-page ${shoppingCart.isFetching ? 'prod-page_disabled' : ''}`}>
+      <div className='prod-page__header'>
+        <Header />
       </div>
-    );
-  }
+      <div className='prod-page__products-list'>
+        <ProductsList />
+      </div>
+      <div className='prod-page__footer'>
+        <Footer />
+      </div>
+    </div>
+  );
 }
 
 const mapStateToProps = function (state: IReducedState) {

@@ -2,6 +2,8 @@
   "exclude": [
     "./temp",
     "./node_modules",
+    "./coverage",
+    "./bandle",
     "webpack.config.js"
   ],
   "compilerOptions": {
