@@ -16,8 +16,17 @@ $ npm install
 # Сборка
 ```
 $ npm run dev
+$ npm run prod
 ```
 
 # Запуск
 ```
 $ npm run server
+```
+
+# Тесты
+```
+$ npm run test
+$ npm run test_debug
+$ npm run coverage
+```
