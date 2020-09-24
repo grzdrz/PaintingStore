@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/29</span>
+                <span class='fraction'>0/20</span>
             </div>
         
             
@@ -39,14 +39,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/26</span>
+                <span class='fraction'>0/18</span>
             </div>
         
             
@@ -156,17 +156,7 @@
 <a name='L97'></a><a href='#L97'>97</a>
 <a name='L98'></a><a href='#L98'>98</a>
 <a name='L99'></a><a href='#L99'>99</a>
-<a name='L100'></a><a href='#L100'>100</a>
-<a name='L101'></a><a href='#L101'>101</a>
-<a name='L102'></a><a href='#L102'>102</a>
-<a name='L103'></a><a href='#L103'>103</a>
-<a name='L104'></a><a href='#L104'>104</a>
-<a name='L105'></a><a href='#L105'>105</a>
-<a name='L106'></a><a href='#L106'>106</a>
-<a name='L107'></a><a href='#L107'>107</a>
-<a name='L108'></a><a href='#L108'>108</a>
-<a name='L109'></a><a href='#L109'>109</a>
-<a name='L110'></a><a href='#L110'>110</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L100'></a><a href='#L100'>100</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -182,16 +172,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -222,13 +211,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -271,8 +253,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import formateNumber from '../../assets/helpers';</span>
@@ -291,17 +271,16 @@ interface IProps {
   shoppingCartPopAction: typeof shoppingCartPopAction,
 }
 &nbsp;
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >class ProductBlock extends <span class="cstat-no" title="statement not covered" >R</span>eact.</span>Component&lt;IProps&gt; </span>{
+function <span class="fstat-no" title="function not covered" >ProductBlock(</span>props: IProps) {
+  const {
+    product,
+    productsInCart,
+    shoppingCartPushAction,
+    shoppingCartPopAction,
+  } = <span class="cstat-no" title="statement not covered" >props;</span>
+  const hasInCart = <span class="cstat-no" title="statement not covered" >productsInCart.includes(product.id);</span>
 &nbsp;
-<span class="fstat-no" title="function not covered" >  async <span class="cstat-no" title="statement not covered" >h</span>andleButtonClick(event: React.MouseEvent&lt;HTMLButtonElement, MouseEvent&gt;) {</span>
-    const <span class="cstat-no" title="statement not covered" >{</span>
-      product,
-      productsInCart,
-      shoppingCartPushAction,
-      shoppingCartPopAction,
-    } = this.props;
-    const <span class="cstat-no" title="statement not covered" >hasInCart = productsInCart.includes(product.id);</span>
-&nbsp;
+  async function <span class="fstat-no" title="function not covered" >handleButtonClick(</span>event: React.MouseEvent&lt;HTMLButtonElement, MouseEvent&gt;) {
     if (<span class="cstat-no" title="statement not covered" >!h</span>asInCart) {
 <span class="cstat-no" title="statement not covered" >      shoppingCartPushAction({</span>
         isFetching: true,
@@ -329,59 +308,50 @@ interface IProps {
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >  render(</span>) {</span>
-    const {
-      product<span class="cstat-no" title="statement not covered" >,</span>
-      productsInCart<span class="cstat-no" title="statement not covered" >,</span>
-    } = <span class="cstat-no" title="statement not covered" >this.props;</span>
-&nbsp;
-    const hasInCart = <span class="cstat-no" title="statement not covered" >productsInCart.includes(product.id);</span>
-&nbsp;
-<span class="cstat-no" title="statement not covered" >    return (</span>
-      &lt;div className={`product-block ${product.isSold ? 'product-block_is-sold' : ''}`}&gt;
-        &lt;div className='product-block__image-container'&gt;
-          &lt;img
-            className='product-block__image'
-            src={`${compilationOptions.forGithubPages ? '/PaintingStore' : ''}/src/data/images/painting-${product.id}.jpg`}
-          /&gt;
-        &lt;/div&gt;
-        &lt;div className='product-block__description'&gt;
-          &lt;p className='product-block__name-and-author'&gt;
-            &lt;span className='product-block__name'&gt;{`«${product.name}»`}&lt;/span&gt;
-            &lt;span className='product-block__author'&gt;{product.author}&lt;/span&gt;
-          &lt;/p&gt;
-          {product.isSold
-            ? (
-              &lt;p className='product-block__sold-text'&gt;Продана на аукционе&lt;/p&gt;
-            )
-            : (
-              &lt;div className='product-block__prices-and-buying-button'&gt;
-                &lt;div className='product-block__prices'&gt;
-                  {product.oldPrice !== undefined
-                    ? (
-                      &lt;p className='product-block__old-price'&gt;
-                        &lt;span className='product-block__old-price-number'&gt;{`${formateNumber(product.oldPrice)} ${product.currencyType}`}&lt;/span&gt;
-                      &lt;/p&gt;
-                    ) : null}
-                  &lt;p className='product-block__price'&gt;
-                    &lt;span className='product-block__price-number'&gt;{`${formateNumber(product.price)} ${product.currencyType}`}&lt;/span&gt;
-                  &lt;/p&gt;
-                &lt;/div&gt;
-                &lt;div className='product-block__buying-button'&gt;
-                  &lt;Button
-                    text='Купить'
-                    withCheckMark={hasInCart}
-                    handleClick={this.handleButtonClick.bind(this)}
-                  /&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-            )
-          }
-        &lt;/div&gt;
+<span class="cstat-no" title="statement not covered" >  return (</span>
+    &lt;div className={`product-block ${product.isSold ? 'product-block_is-sold' : ''}`}&gt;
+      &lt;div className='product-block__image-container'&gt;
+        &lt;img
+          className='product-block__image'
+          src={`${compilationOptions.forGithubPages ? '/PaintingStore' : ''}/src/data/images/painting-${product.id}.jpg`}
+        /&gt;
       &lt;/div&gt;
-    );
-  }
-<span class="cstat-no" title="statement not covered" >}</span>
+      &lt;div className='product-block__description'&gt;
+        &lt;p className='product-block__name-and-author'&gt;
+          &lt;span className='product-block__name'&gt;{`«${product.name}»`}&lt;/span&gt;
+          &lt;span className='product-block__author'&gt;{product.author}&lt;/span&gt;
+        &lt;/p&gt;
+        {product.isSold
+          ? (
+            &lt;p className='product-block__sold-text'&gt;Продана на аукционе&lt;/p&gt;
+          )
+          : (
+            &lt;div className='product-block__prices-and-buying-button'&gt;
+              &lt;div className='product-block__prices'&gt;
+                {product.oldPrice !== undefined
+                  ? (
+                    &lt;p className='product-block__old-price'&gt;
+                      &lt;span className='product-block__old-price-number'&gt;{`${formateNumber(product.oldPrice)} ${product.currencyType}`}&lt;/span&gt;
+                    &lt;/p&gt;
+                  ) : null}
+                &lt;p className='product-block__price'&gt;
+                  &lt;span className='product-block__price-number'&gt;{`${formateNumber(product.price)} ${product.currencyType}`}&lt;/span&gt;
+                &lt;/p&gt;
+              &lt;/div&gt;
+              &lt;div className='product-block__buying-button'&gt;
+                &lt;Button
+                  text='Купить'
+                  withCheckMark={hasInCart}
+                  handleClick={handleButtonClick.bind(this)}
+                /&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          )
+        }
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
 &nbsp;
 <span class="cstat-no" title="statement not covered" >export default ProductBlock;</span>
 &nbsp;</pre></td></tr></table></pre>
@@ -391,7 +361,7 @@ interface IProps {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Thu Sep 24 2020 13:20:15 GMT+0700 (GMT+07:00)
+                at Thu Sep 24 2020 16:29:58 GMT+0700 (GMT+07:00)
             </div>
         </div>
         <script src="../../../prettify.js"></script>

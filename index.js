@@ -428,8 +428,6 @@ var map = {
 	"./assets/fonts/Merriweather/merriweather-regular.woff": "./src/assets/fonts/Merriweather/merriweather-regular.woff",
 	"./assets/fonts/Merriweather/merriweather-regular.woff2": "./src/assets/fonts/Merriweather/merriweather-regular.woff2",
 	"./components/logo/images/logo.svg": "./src/components/logo/images/logo.svg",
-	"./components/test-component/images/абрикос-1.jpg": "./src/components/test-component/images/абрикос-1.jpg",
-	"./components/test-component/images/ананас-2.jpg": "./src/components/test-component/images/ананас-2.jpg",
 	"./data/images/painting-1.jpg": "./src/data/images/painting-1.jpg",
 	"./data/images/painting-2.jpg": "./src/data/images/painting-2.jpg",
 	"./data/images/painting-3.jpg": "./src/data/images/painting-3.jpg",
@@ -760,32 +758,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/components/test-component/images/абрикос-1.jpg":
-/*!************************************************************!*\
-  !*** ./src/components/test-component/images/абрикос-1.jpg ***!
-  \************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/components/test-component/images/абрикос-1.jpg");
-
-/***/ }),
-
-/***/ "./src/components/test-component/images/ананас-2.jpg":
-/*!***********************************************************!*\
-  !*** ./src/components/test-component/images/ананас-2.jpg ***!
-  \***********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/components/test-component/images/ананас-2.jpg");
-
-/***/ }),
-
 /***/ "./src/data/images/painting-1.jpg":
 /*!****************************************!*\
   !*** ./src/data/images/painting-1.jpg ***!
@@ -935,4 +907,4 @@ __webpack_require__.r(__webpack_exports__);
 /***/ })
 
 /******/ });
-//# sourceMappingURL=index.js.map?v=40995a833c1f48839b40
+//# sourceMappingURL=index.js.map?v=866f402407883b1664b0
