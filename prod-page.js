@@ -34425,4 +34425,4 @@ function shoppingCartPushAction(buyingProduct) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=prod-page.js.map?v=706877311f1c8e96551b
+//# sourceMappingURL=prod-page.js.map?v=a30d69f4456d495c4078
