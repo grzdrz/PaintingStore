@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack --mode development",
+    "prod": "webpack --mode production",
     "server": "webpack-dev-server --open --mode development",
     "deploy": "gh-pages -d bandle",
     "test": "jest --watch --no-cache",
