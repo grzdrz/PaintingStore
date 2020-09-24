@@ -33228,7 +33228,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function Logo() {
     return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'logo' },
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", { className: 'logo__image', src: (_compilationOptions__WEBPACK_IMPORTED_MODULE_1__["default"].forGithubPages ? '/Redsoft_Task' : '') + "/src/components/logo/images/logo.svg" })));
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", { className: 'logo__image', src: (_compilationOptions__WEBPACK_IMPORTED_MODULE_1__["default"].forGithubPages ? '/PaintingStore' : '') + "/src/components/logo/images/logo.svg" })));
 }
 /* harmony default export */ __webpack_exports__["default"] = (Logo);
 
@@ -33450,7 +33450,7 @@ var ProductBlock = /** @class */ (function (_super) {
         var hasInCart = productsInCart.includes(product.id);
         return (react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: "product-block " + (product.isSold ? 'product-block_is-sold' : '') },
             react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: 'product-block__image-container' },
-                react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("img", { className: 'product-block__image', src: (_compilationOptions__WEBPACK_IMPORTED_MODULE_1__["default"].forGithubPages ? '/Redsoft_Task' : '') + "/src/data/images/painting-" + product.id + ".jpg" })),
+                react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("img", { className: 'product-block__image', src: (_compilationOptions__WEBPACK_IMPORTED_MODULE_1__["default"].forGithubPages ? '/PaintingStore' : '') + "/src/data/images/painting-" + product.id + ".jpg" })),
             react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: 'product-block__description' },
                 react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", { className: 'product-block__name-and-author' },
                     react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", { className: 'product-block__name' }, "\u00AB" + product.name + "\u00BB"),
@@ -34425,4 +34425,4 @@ function shoppingCartPushAction(buyingProduct) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=prod-page.js.map?v=a30d69f4456d495c4078
+//# sourceMappingURL=prod-page.js.map?v=40995a833c1f48839b40
