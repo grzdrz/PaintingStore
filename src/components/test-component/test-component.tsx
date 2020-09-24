@@ -37,7 +37,7 @@ class TestComponent extends React.Component<IProps, IState> {
         </button >
         <img
           className='test-component__image'
-          src={`${compilationOptions.forGithubPages ? '/Redsoft_Task' : ''}/src/components/test-component/images/${flag ? 'абрикос-1' : 'ананас-2'}.jpg`}
+          src={`${compilationOptions.forGithubPages ? '/PaintingStore' : ''}/src/components/test-component/images/${flag ? 'абрикос-1' : 'ананас-2'}.jpg`}
         />
       </div>
     );

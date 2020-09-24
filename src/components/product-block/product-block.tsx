@@ -65,7 +65,7 @@ class ProductBlock extends React.Component<IProps> {
         <div className='product-block__image-container'>
           <img
             className='product-block__image'
-            src={`${compilationOptions.forGithubPages ? '/Redsoft_Task' : ''}/src/data/images/painting-${product.id}.jpg`}
+            src={`${compilationOptions.forGithubPages ? '/PaintingStore' : ''}/src/data/images/painting-${product.id}.jpg`}
           />
         </div>
         <div className='product-block__description'>

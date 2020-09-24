@@ -1,11 +1,11 @@
-# Redsoft_Task
+# PaintingStore
 <a href="https://docs.google.com/document/d/1Vamqwl3MaXDFOMcEBTVsvoZhADblO-CcBVqVKs3Pij0/edit">Тестовое задание</a> от Redsoft
 
-<a href="https://grzdrz.github.io/Redsoft_Task"><p>Превью</p></a>
+<a href="https://grzdrz.github.io/PaintingStore"><p>Превью</p></a>
 
 # Загрузка
 ```
-$ git clone https://github.com/grzdrz/Redsoft_Task.git
+$ git clone https://github.com/grzdrz/PaintingStore.git
 ```
 
 # Установка
